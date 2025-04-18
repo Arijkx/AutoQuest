@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Quests</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="dark-mode">
+  <h1>AutoQuest</h1>
+  <div class="tab-buttons">
+    <button class="tab-button active" data-tab="overview">Overview</button>
+    <button class="tab-button" data-tab="quests">Quests</button>
+    <button class="tab-button" data-tab="achievements">Achievements</button>
+    <button class="tab-button" data-tab="shop">Shop</button>
+    <button class="tab-button" data-tab="settings">Settings</button>
+  </div>
+  <div class="stats-bar card">
+    <div class="stat-sections">
+      <div class="stat-section">
+        <strong>Level:</strong>
+        <span id="playerLevel">1</span>
+      </div>
+      <div class="stat-section">
+        <strong>XP:</strong>
+        <span id="playerXP">0</span> / <span id="playerXPToNext">100</span>
+      </div>
+      <div class="stat-section">
+        <strong>Gold:</strong>
+        <span id="playerGold">0</span>
+      </div>
+      <div class="stat-section">
+        <strong>Diamonds:</strong>
+        <span id="playerDiamonds">0</span>
+      </div>
+    </div>
+    <div class="xp-bar-container" style="margin-top: 10px;">
+      <div class="xp-bar" id="xpBar"></div>
+    </div>
+  </div>
+  <div id="overview" class="tab-content active">
+    <div class="card">
+      <h2>Overview</h2>
+      <h3>Statistics</h3>
+      <p>Completed Quests: <span id="completedQuests">0</span></p>
+      <p>Total Gold Earned: <span id="totalGoldEarned">0</span></p>
+      <hr>
+      <h3>Active Bonuses</h3>
+      <p>Gold Bonus: <span id="goldBonus">0</span>%</p>
+      <p>XP Bonus: <span id="xpBonus">0</span>%</p>
+      <p>Diamond Bonus: <span id="diamondBonus">0</span>%</p>
+      <hr>
+      <h3>Purchased Items</h3>
+      <div id="items-container"></div>
+      <div id="log"></div>
+    </div>
+  </div>
+  <div id="quests" class="tab-content">
+    <div class="card">
+      <h2>Quests</h2>
+      <div id="quest-container"></div>
+    </div>
+  </div>
+  <div id="achievements" class="tab-content">
+    <div class="card">
+      <h2>Achievements</h2>
+      <p>Meet certain requirements to claim rewards.</p>
+      <div id="achievement-container"></div>
+    </div>
+  </div>
+  <div id="shop" class="tab-content">
+    <div class="card">
+      <h2>Shop</h2>
+      <p>Here you can purchase items once using diamonds.</p>
+      <div id="shop-container"></div>
+    </div>
+  </div>
+  <div id="settings" class="tab-content">
+    <div class="card">
+      <h2>Settings</h2>
+      <p>Sound on/off, Reset game, etc.</p>
+      <button id="resetGameButton">Reset Game</button>
+      <button id="toggleDarkModeButton">Toggle Dark Mode</button>
+      <hr>
+      <h3>Save Game</h3>
+      <button id="exportGameButton">Download Save</button>
+      <h3>Load Game</h3>
+      <input type="file" id="importGameFile" style="display:none;" accept=".json" />
+      <button id="importGameButton">Select file...</button>
+    </div>
+  </div>
+
+</body>
+
+</html>

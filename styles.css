@@ -1,0 +1,345 @@
+body {
+  font-family: sans-serif;
+  margin: 20px auto;
+  max-width: 900px;
+  background-color: #fff;
+  color: #000;
+}
+
+.tab-buttons {
+  margin-bottom: 10px;
+}
+
+.tab-button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.tab-button.active {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+.tab-content {
+  display: none;
+  padding: 10px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.card {
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.xp-bar-container {
+  width: 100%;
+  height: 20px;
+  background-color: #ccc;
+  border: 1px solid #999;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.xp-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50;
+  transition: width 0.3s;
+}
+
+.quest {
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.quest-header h2 {
+  margin: 0;
+  font-size: 1.4em;
+}
+
+.quest-level {
+  font-weight: bold;
+  background: #4caf50;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.quest-body p {
+  margin: 5px 0;
+}
+
+.quest-progress-container {
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.quest-progress-bar {
+  height: 10px;
+  background-color: #4caf50;
+  transition: width 0.3s;
+}
+
+.quest-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.quest-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.quest-actions button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.quest-actions button:hover:not(:disabled) {
+  background-color: #43a047;
+}
+
+.achievement-card {
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.achievement-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.achievement-status.locked {
+  color: red;
+  font-weight: bold;
+}
+
+.achievement-status.claimable {
+  color: #2e86de;
+  font-weight: bold;
+}
+
+.achievement-status.claimed {
+  color: green;
+  font-weight: bold;
+}
+
+.achievement-body p {
+  margin: 5px 0;
+}
+
+.achievement-actions {
+  margin-top: 15px;
+}
+
+.achievement-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff9800;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.achievement-actions button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.achievement-actions button:hover:not(:disabled) {
+  background-color: #e68a00;
+}
+
+.shop-item {
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.shop-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.shop-cost {
+  font-weight: bold;
+  color: #9c27b0;
+}
+
+.shop-body p {
+  margin: 5px 0;
+}
+
+.shop-actions {
+  margin-top: 15px;
+}
+
+.shop-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #673ab7;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.shop-actions button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.shop-actions button:hover:not(:disabled) {
+  background-color: #5e35b1;
+}
+
+#log {
+  border: 1px dashed #999;
+  padding: 5px;
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.stats-bar {
+  display: flex;
+  flex-direction: column;
+  background-color: #eee;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.stat-sections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-section {
+  flex: 1;
+  text-align: center;
+}
+
+#items-container {
+  margin-top: 10px;
+}
+
+.item-icon {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .tab-button {
+  background-color: #333;
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+body.dark-mode .tab-button.active {
+  background-color: #444;
+}
+
+body.dark-mode .stats-bar {
+  background-color: #333;
+  border-color: #555;
+}
+
+body.dark-mode .xp-bar-container {
+  background-color: #555;
+  border-color: #777;
+}
+
+body.dark-mode .xp-bar {
+  background-color: #76ff03;
+}
+
+body.dark-mode .card,
+body.dark-mode .quest,
+body.dark-mode .achievement-card,
+body.dark-mode .shop-item {
+  background: linear-gradient(135deg, #2c2c2c 0%, #3c3c3c 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .quest-level {
+  background: #76ff03;
+  color: #000;
+}
+
+body.dark-mode .achievement-actions button {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+body.dark-mode .achievement-actions button:hover:not(:disabled) {
+  background-color: #e68a00;
+}
+
+body.dark-mode .shop-actions button {
+  background-color: #673ab7;
+  color: #fff;
+}
+
+body.dark-mode .shop-actions button:hover:not(:disabled) {
+  background-color: #5e35b1;
+}
